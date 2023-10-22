@@ -6,6 +6,9 @@ screen = pygame.display.set_mode((1280, 720))
 clock = pygame.time.Clock()
 running = True
 
+# Load the background image
+background_image = pygame.image.load("background.png")
+
 while running:
     # poll for events
     # pygame.QUIT event means the user clicked X to close your window
@@ -14,7 +17,7 @@ while running:
             running = False
 
     # fill the screen with a color to wipe away anything from last frame
-    screen.fill("white")
+    screen.blit(background_image, (0, 0))
 
     # RENDER YOUR GAME HERE
 
